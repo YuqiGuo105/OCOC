@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.club">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/hhpp"
+        android:label="OCOC"
+        android:roundIcon="@drawable/hhpp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Communication.DetailPage.detailClub"></activity>
+        <activity android:name=".Communication.DetailPage.detailActivity" />
+        <activity android:name=".Communication.Search" />
+        <activity android:name=".Communication.Noticification.register_club" />
+        <activity android:name=".Communication.Noticification.register_user" />
+        <activity android:name=".Communication.manageActivity" />
+        <activity android:name=".Communication.AdminAccount" />
+        <activity android:name=".Communication.ClubAccount" />
+        <activity android:name=".Communication.PostActivity" />
+        <activity android:name=".Communication.EditProfile" />
+        <activity android:name=".Communication.UserAccount" />
+        <activity android:name=".Communication.registerUser" />
+        <activity android:name=".Communication.registerClub" />
+        <activity android:name=".Communication.aHomePage" />
+        <activity android:name=".Communication.LogIn" />
+        <activity android:name=".Communication.activity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 适配 Android 7.0 文件意图 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.club.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/flie_path"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

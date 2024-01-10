@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.club.Communication.Search" >
+<RelativeLayout
+    android:id="@+id/dd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/upbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/return1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@mipmap/in_return" />
+
+        <ImageButton
+            android:id="@+id/btn_popa"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/return1"
+            android:background="@drawable/arrow" />
+
+        <EditText
+            android:id="@+id/search1"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/btn_popa"
+            android:hint="Search for activity"
+            android:padding="5dip"
+            android:queryHint="input search content"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="search" />
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listViewh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/upbar"/>
+</RelativeLayout>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dd"
+        />
+
+
+</RelativeLayout>

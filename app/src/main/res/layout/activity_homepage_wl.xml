@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:focusableInTouchMode="true"
+    tools:context=".Communication.aHomePage">
+
+
+    <RelativeLayout
+        android:id="@+id/up"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        >
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_app"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="CLUB"-->
+
+<!--            android:textSize="23sp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginLeft="120dp"-->
+<!--            android:textColor="@color/white"-->
+
+<!--            />-->
+
+        <RelativeLayout
+            android:id="@+id/upbar1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+           >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="OCOC"
+    android:textSize="20dp"
+    android:padding="10dp"
+    android:textColor="@color/black"
+    />
+
+            <ImageButton
+                android:id="@+id/buttonsc1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/btn_pop1"
+                android:background="@drawable/se"
+                android:layout_marginRight="10dp"
+                android:padding="2dp"/>
+            <ImageButton
+                android:id="@+id/btn_pop1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/sorting"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    //end
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/end"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        >-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_button1"-->
+<!--            android:layout_width="50dp"-->
+
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/caidan"-->
+<!--            android:layout_margin="10dp"-->
+
+
+<!--            />-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_button2"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/caidan"-->
+<!--            android:layout_margin="10dp"-->
+
+
+<!--            />-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_button3"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/caidan"-->
+<!--            android:layout_margin="10dp"-->
+
+
+<!--            />-->
+<!--    </LinearLayout>-->
+
+//end
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        >
+        <RadioButton
+            android:id="@+id/radio_button_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:button="@null"
+            android:background="@drawable/radio1"
+android:checked="true"
+
+        />
+        <RadioButton
+            android:id="@+id/radio_button_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+
+            android:button="@null"
+
+            android:background="@drawable/radio2"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_button_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:button="@null"
+            android:background="@drawable/radio4"
+            />
+    </RadioGroup>
+
+
+
+    //content
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/up"
+        android:layout_above="@+id/radio_group_button"
+        >
+        <LinearLayout
+            android:id="@+id/mLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/timg">
+
+            //search line
+            <TextView
+                        android:id="@+id/btn_app"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content"
+                        android:text="activity"
+                        android:layout_marginTop="5dp"
+                        android:textSize="32sp"
+
+                        android:textColor="@color/white"
+
+                        />
+
+            //advertise
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+android:layout_below="@+id/btn_app"
+                android:layout_margin="10dp"
+                 />
+
+            <com.example.club.view.Indicator
+                android:id="@+id/indicator"
+                android:layout_width="400dp"
+                android:layout_height="45dp"
+                android:layout_alignBottom="@+id/viewPager"
+                android:layout_centerHorizontal="true"
+
+                android:clickable="true"
+                app:Indicator_bgColor="#111111"
+                app:Indicator_foreColor="#222222"
+                app:setNumber="3"
+
+                />
+</RelativeLayout>
+
+
+            //detail content
+
+
+            <View
+               android:layout_width="match_parent"
+               android:layout_height="3dp"
+               android:background="#dfdfdf"/>
+
+            <ListView
+                android:id="@+id/hh"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                />
+
+
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
